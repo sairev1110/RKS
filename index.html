@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Template Title -->
+    <title>RKS Steel Structures</title>
+
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
+      
+    <!-- Bootstrap 3.2.0 stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Font Awesome Icon stylesheet 
+    <link href="css/font-awesome.min.css" rel="stylesheet"> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="Stylesheet" />
+    <!-- Owl Carousel stylesheet --><link href="css/owl.carousel.css" rel="stylesheet"/>
+    <!-- Pretty Photo stylesheet --><link href="css/prettyPhoto.css" rel="stylesheet"/>
+    <!-- Custom stylesheet --><link href="style.css" rel="stylesheet"/>
+    <link href="css/color/white.css" rel="stylesheet"/>
+    <!-- Custom Responsive stylesheet --><link href="css/responsive.css" rel="stylesheet"/>
+     <script  type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+     
+    <!-- LightBox starts here-->
+         <link href="css/vlightbox1.css" rel="stylesheet" type="text/css" />
+         <link href="css/visuallightbox.css" rel="stylesheet" type="text/css" media="screen"/>
+
+    <!-- LightBoz ends here-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<!-- Banner Style-->
+    <link rel="stylesheet" href="css/style.css"/>
+<style type="text/css">
+
+</style>
+    <script type="text/javascript">
+        $('a').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $(this).attr('href') ).offset().top
+            }, 500);
+            return false;
+        });
+
+        $(document).ready(function () {
+
+    $('a[href^="#site-main"]').addClass('active');
+
+//smoothscroll
+    $('.main-nav').on('click', function (e) {
+        e.preventDefault();
+        //  $(document).off("scroll");
+        var athis = this;
+        var target = this.hash,
+                menu = target;
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top + 2
+        }, 800, 'swing', function () {
+            window.location.hash = target;
+            $('.main-nav').removeClass('active');
+            $(athis).addClass('active');
+
+        });    
+    });    
+
+    $(window).scroll(function (event) {
+        var scrollPos = $(document).scrollTop();
+        if (scrollPos === 0)
+        {
+            $('a[href^="#site-main"]').addClass('active');
+            return;
+        }    
+        $('.main-nav').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.main-nav').removeClass("active");
+                currLink.addClass("active");
+            } else {
+                currLink.removeClass("active");
+            }
+        });    
+    })    
+});
+
+    </script>
+    <style type="text/css">
+    .bgwhite{ background-color:blue;}
+    .bgwhitetrans{ background-color:red;}
+    
+@font-face {
+        font-family:CopperplateGothicBold;
+        src: url(fonts/CopperplateGothicBold.otf);
+}
+
+/*body{font-family:CopperplateGothicBold;} "#38516d03" */
+
+ p {text-align: justify;}
+    </style>
+  </head>
+  <body>
+    <!-- ====== Header Section ====== -->
+     <!-- ====== End Header Section ====== -->
+
+
+    <!-- ====== Menu Section ====== --> 
+    <section id="menu"> 
+      <div class="navigation">
+        <div id="main-nav" class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:white;"> <!-- #38516d03; -->
+          <div class="container">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" style="padding: 0px;" href="index.html">
+                    <table style="border:#D5D5D5 0px solid;">
+						<tr><td style="padding-top:0px;"><img src="images/RKsteelslogo.png" alt="RKS Steel Structures Logo"/></td>
+							<td style="padding-top:15px;">
+								<table style="line-height:12px; font-family:Copperplate Gothic Bold, CopperplateGothicBold" >
+									<tr><td style=" text-align:center; font-size:36px; text-align:left; font-family:Arial, Helvetica, sans-serif; font-weight:bold;text-shadow: 1px 1px 1px #FFFFFF; color:#838383;">RKS</td></tr>
+									<tr><td style="font-size:14px; font-weight:bold; text-align:left; padding-top:15px;text-shadow: 0.1px 0.1px 0.1px #FFFFFF; color:#838383">Steel Structures</td></tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+                    <!--<img src="images/RKsteelslogo.png" alt="RK Steel Structures"/>-->
+              </a>
+            </div> <!-- end .navbar-header -->
+
+            <div class="navbar-collapse collapse">
+              <ul id="ulnav" class="nav navbar-nav navbar-right">
+                <li class="scroll"><a href="#top"><i class="fa fa-home"></i></a></li>
+                <li class="scroll"><a href="#features">Features</a></li>
+                <li class="scroll"><a href="#projects_screenshots">Projects</a></li>
+                <li class="scroll"><a href="#gallary">Gallery</a></li>
+                <li class="scroll"><a href="#description">Why RKS</a></li>
+                <li class="scroll"><a href="#aboutus">About Us</a></li>
+                <li class="scroll"><a href="#associate">Associates</a></li>
+                <li class="scroll"><a href="#strength">Strength</a></li>
+                <li class="scroll"><a href="#career">Career</a></li>
+                <li class="scroll"><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!-- end .navbar-collapse -->
+
+          </div> <!-- end .container -->
+        </div> <!-- end #main-nav -->
+      </div> <!-- end .navigation -->
+    </section>
+    <!-- ====== End Menu Section ====== -->
+
+
+    <!--Banner starts here-->
+  <div class='csslider1 autoplay'>
+        <input name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide' />
+        <input name="cs_anchor1" id='cs_slide1_1' type="radio" class='cs_anchor slide' />
+        <input name="cs_anchor1" id='cs_slide1_2' type="radio" class='cs_anchor slide' />
+        <input name="cs_anchor1" id='cs_slide1_3' type="radio" class='cs_anchor slide' />
+        <input name="cs_anchor1" id='cs_slide1_4' type="radio" class='cs_anchor slide' />
+        <input name="cs_anchor1" id='cs_slide1_5' type="radio" class='cs_anchor slide' />
+        <input name="cs_anchor1" id='cs_play1' type="radio" class='cs_anchor' checked="checked"/>
+        <input name="cs_anchor1" id='cs_pause1_0' type="radio" class='cs_anchor pause'/>
+        <input name="cs_anchor1" id='cs_pause1_1' type="radio" class='cs_anchor pause'/>
+        <input name="cs_anchor1" id='cs_pause1_2' type="radio" class='cs_anchor pause'/>
+        <input name="cs_anchor1" id='cs_pause1_3' type="radio" class='cs_anchor pause'/>
+        <input name="cs_anchor1" id='cs_pause1_4' type="radio" class='cs_anchor pause'/>
+        <input name="cs_anchor1" id='cs_pause1_5' type="radio" class='cs_anchor pause'/>
+    <ul>
+      <li class="cs_skeleton"><img src="images/bannerimg/n1.jpg" alt="" title="" style="width: 100%;"/></li>
+      <li class='num0 img slide'><img src='images/bannerimg/n1.jpg' alt='RKS Steel Structures'/></li>
+      <li class='num1 img slide'><img src='images/bannerimg/n2.jpg' alt='RKS Steel Structures'/></li>
+      <li class='num2 img slide'><img src='images/bannerimg/n3.jpg' alt='RKS Steel Structures'/></li>
+      <li class='num3 img slide'><img src='images/bannerimg/n4.jpg' alt='' title="" /></li>
+      <li class='num4 img slide'><img src='images/bannerimg/n5.jpg' alt='' title="" /></li>
+      <li class='num5 img slide'><img src='images/bannerimg/n1.jpg' alt='' title="" /></li>
+    </ul>
+   <!-- <div class='cs_arrowprev'>
+          <label class='num0' for='cs_slide1_0'><span><i></i></span></label>
+          <label class='num1' for='cs_slide1_1'><span><i></i></span></label>
+          <label class='num2' for='cs_slide1_2'><span><i></i></span></label>
+          <label class='num3' for='cs_slide1_3'><span><i></i></span></label>
+          <label class='num4' for='cs_slide1_4'><span><i></i></span></label>
+          <label class='num5' for='cs_slide1_5'><span><i></i></span></label>
+        </div>
+        <div class='cs_arrownext'>
+          <label class='num0' for='cs_slide1_0'><span><i></i></span></label>
+          <label class='num1' for='cs_slide1_1'><span><i></i></span></label>
+          <label class='num2' for='cs_slide1_2'><span><i></i></span></label>
+          <label class='num3' for='cs_slide1_3'><span><i></i></span></label>
+          <label class='num4' for='cs_slide1_4'><span><i></i></span></label>
+          <label class='num5' for='cs_slide1_5'><span><i></i></span></label>
+        </div>
+    -->
+    </div>
+<!-- Banner ends here-->
+
+    <!-- ====== Features Section ====== -->
+    <section id="features">
+      <div class="features" style="background-image:url(images/bg/Etower.jpg); background-repeat:no-repeat;">
+        <div class="container">
+
+          <div class="header">
+            <h1>Our Features</h1>
+            <p class="text-center">RKS Steel Structures started since 1992 by Mr.R.K.Selvaraj<br />RKS Industries / R.K.Selvaraj & Co is now changed as RKS Steel Structures.</p>
+            <p class="text-center">We Fully Committed And Involved In Providing The Best Services In Following Domain.</p>
+            <div class="underline">
+              <i class="fa fa-briefcase"></i>
+            </div>
+          </div> <!-- end .container> .header -->
+
+          <div class="row">
+            <div class="col-md-3">
+              <div class="featured-item-img">
+                <img src="images/featuresimg.jpg" alt="RKS" class="thumbnail"/>
+              </div>
+            </div>
+            <div class="col-md-9 feature-list">
+              <div class="row">
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>HEAVY INDUSTRIAL BUILDING</h3>
+                      <p style="text-align:justify;">Our product range includes a wide range of Heavy Industrial Building Structures. RKS Steel structures can provide steel industrial buildings at a fraction of the cost of traditional construction.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (1st item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>COMMERCIAL BUILDINGS</h3>
+                      <p style="text-align:justify;">RKS Steel Structures offers a wide range of fabricated retails and commercial steel buildings, including office buildings, strip malls, retail stores, and shipping & distribution facilities.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (2nd item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>INSTITUTIONAL BUILDINGS</h3>
+                      <p style="text-align:justify;">RKS Steel Structure Construction for Institutions. We are the leading institutional building construction supplier with expertise to the steel construction at best in price & quality.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (3rd item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>RECREATIONAL BUILDING</h3>
+                      <p style="text-align:justify;">RKS Steel structures offers incomparable flexibility in our steel buildings to provide a structure that accommodate all kinds of recreational activities, from swimming pools to basketball courts, even roller rinks for your business, school or church organization.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (4th item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>TEXTILE UNITS</h3>
+                      <p style="text-align:justify;">Our well-equipped manufacturing facilities enable us to undertake Structural Works service or heavy duty components. With our team of highly qualified engineers, we are able to design products as per the requirements of varied industry applications.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (5th item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>AIRCRAFT HANGAR</h3>
+                      <p style="text-align:justify;">Choosing a steel aircraft hangar to store your aircraft offers a great deal of advantages such as a cheaper construction and labor costs, a strong and justified sense of security, a snappy and uncomplicated assembly, a great deal of flexibility in how your hangar is built and lower on-going maintenance costs after construction.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (6th item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>COMMUNITY HALLS</h3>
+                      <p style="text-align:justify;">When it comes to A+ grade designs and construction with rolled steel, RKS Steel Structures have all your needs and requirements covered. As India's leading manufacturer of premium steel structures, we have the skills, expertise and equipment to deliver you top-shelf school or community buildings of any kind.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (6th item) -->
+
+                <div class="col-sm-6 col-md-6">
+                  <div class="featured-item">
+                    <div class="icon">
+                      <div class="icon-style"><i class="fa fa-building-o"></i></div>
+                    </div> <!-- end icon -->
+                    <div class="meta-text">
+                      <h3>AGRICULTURE BUILDINGS</h3>
+                      <p style="text-align:justify;">Metal farm buildings require less maintenance than structures constructed with traditional building materials, allowing you more time to get important work done. For more than 35 years, RKS steel structures has provided America’s farming community with top-quality metal barns, large farm storage buildings, steel riding arenas and metal horse stables.</p>
+                    </div> <!-- end .meta-text -->
+                  </div> <!-- end .featured-item -->
+                </div> <!-- end .feature-list> .row > .col-md-6 (6th item) -->
+
+              </div> <!-- end .feature-list> .row -->
+            </div> <!-- end .feature-list -->
+          </div> <!-- end .container> .row -->
+
+        </div> <!-- end .container -->
+      </div> <!-- end .features -->
+    </section>
+    <!-- ====== End Features Section ====== -->
+
+    <!-- ====== Screenshots Section ====== -->
+    <section id="projects_screenshots">
+      <div class="screenshots section-padding dark-bg">
+        <div class="container">
+
+          <div class="header">
+            <h1>Projects</h1>
+            <p  class="text-center"><b>THE WORLD'S MOST RELIABLE, INNOVATIVE SERVICE & SOLUTION PROVIDER IN STEEL STRUCTURES</b><br />
+            RKS Steel structures in the field 35 years. And the fact is, experience matters.
+            We provide complete Steel Building Solutions from concept to completion for factory buildings, warehouses, malls, 
+            stadiums, sports complexes, showrooms, low rise buildings and other commercial buildings. 
+            We provide complete Steel Building Solutions from concept to completion for factory buildings, warehouses, malls, stadiums, sports complexes, showrooms, 
+            low rise buildings and other commercial buildings.</p>
+            <ul>
+                <li>Avg. area covering 5,00,000 Sq. feet per year</li>
+                <li>Average Turnover Of 2000 MT per year</li>
+                <li>Year High Is 5000 MT (2011 - 2012)</li>
+            </ul>
+            <div class="underline"><i class="fa fa-building"></i></div>
+          </div>
+
+            <!-- owl carousel starts here-->
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <a href="images/p1big.jpg" data-rel="prettyPhoto"><img src="images/p1.jpg" alt="RKS Steel Structures"/></a>
+            </div> <!-- end item -->
+            <div class="item">
+              <a href="images/p2big.jpg" data-rel="prettyPhoto"><img src="images/p2.jpg" alt="RKS Steel Structures"/></a>
+            </div> <!-- end item -->
+            <div class="item">
+              <a href="images/p3big.jpg" data-rel="prettyPhoto"><img src="images/p3.jpg" alt="RKS Steel Structures"/></a>
+            </div> <!-- end item -->
+            <div class="item">
+              <a href="images/p4big.jpg" data-rel="prettyPhoto"><img src="images/p4.jpg" alt="RKS Steel Structures"/></a>
+            </div> <!-- end item -->
+            <div class="item">
+              <a href="images/p5big.jpg" data-rel="prettyPhoto"><img src="images/p5.jpg" alt="RKS Steel Structures"/></a>
+            </div> <!-- end item -->
+            <div class="item">
+              <a href="images/p6big.jpg" data-rel="prettyPhoto"><img src="images/p6.jpg" alt="RKS Steel Structures"/></a>
+            </div> <!-- end item -->
+          </div> 
+            <!-- end owl carousel -->
+
+           
+            <!-- works -->
+
+            <!-- works -->
+            
+
+        </div> <!-- .container -->
+      </div> <!-- end .screenshots -->  
+    </section>
+    <!-- ====== End Screenshots Section ====== -->
+
+    <section id="projects" name="projects"><!--/#Projects-->
+		 <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Our Projects</h2>
+                <p class="text-center wow fadeInDown"></p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="team-img" style="background-color:#FFFFFF">
+                            <img class="img-responsive thumbnail" src="images/ongoingproj.jpg" alt="Ongoing Projects"/>
+                        </div>
+                        <table class="table">
+                          <thead>
+								          <tr><th colspan="2"><h3>OUR ONGOING PROJECTS</h3></th></tr></thead>
+                			     <tbody>
+                                <tr><td><b>M/s. Haritha Polytex [PSG Group]</b>, Coimbatore</td></tr>
+								                <tr><td><b>M/s. SRP kalayanam madapam [Globus Group]</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. SMB Flour Mills</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Kousthuba Spinning Mills</b>, Rajapalayam</td></tr>
+                                <tr><td><b>M/s. SRF Limited</b>, Trichy</td></tr>
+                			</tbody>
+						</table>
+
+            <table class="table">
+                          <thead>
+                          <tr><th colspan="2"><h3>RECENTLY COMPLETED PROJECTS</h3></th></tr></thead>
+                           <tbody>
+                                <tr><td><b>M/s. KPR Mills</b>, Coimbatore</td></tr>
+                <tr><td><b>M/s. Ramco Textile Division</b>, Rajapalayam</td></tr>
+                <tr><td><b>M/s. GHCL Limited</b>, Trichy</td></tr>
+                                <tr><td><b>M/s. Globuse Realtors Private Limited</b>, Coimbatore</td></tr>
+                <tr><td><b>M/s. Precot Meridian</b>, Hassan</td></tr>
+                <tr><td><b>M/s. Pongalur Pioneer Mills</b>, Coimbatore</td></tr>
+                <tr><td><b>M/s. GHCL Limited</b>, Madurai</td></tr>
+                <tr><td><b>M/s. Jayavel Textile</b>, Madurai</td></tr>
+                                <tr><td><b>Completed more then 500 project...</b></td></tr>
+                      </tbody>
+            </table>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="team-img">
+                            <img class="img-responsive thumbnail" src="images/proj2.jpg" alt="Prestigious Projects"/>
+                        </div>
+                        <table class="table">
+								<thead><tr><th><h3>PRESTIGIOUS PROJECTS</h3></th></tr></thead>
+								<tbody>
+								<tr><td><b>M/s. Precot Merdian Limited</b>, Karnataka</td></tr>
+                                <tr><td><b>M/s. Precot Merdian Limited</b>, Perundurai</td></tr>
+                                <tr><td><b>M/s. Precot Merdian Limited</b>, Karale</td></tr>
+                                <tr><td><b>M/s. Ramco Textile Divisions</b>, Rajapalayam</td></tr>
+                                <tr><td><b>M/s. Sree Govindaraja Textile</b>, Andra</td></tr>
+                                <tr><td><b>M/s. Sree Govindaraja Textile</b>, Madurai</td></tr>
+                                <tr><td><b>M/s. Palladam Hi-Tech Weaving Park</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Kumarapallam weaving park</b>, Kumarapallam</td></tr>
+                                <tr><td><b>M/s, Rajashree Sugars</b>, Villupuram</td></tr>
+                                <tr><td><b>M/s.Shanthi Gears</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Good Sun Solar Heater India</b>Coimbatore</td></tr>
+                                <tr><td><b>M/s. Shri Ramakrishna Mission International Volley Ball Stadium</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Narashima Textile Limited</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s.Coka Cola</b>, Gangaikondan</td></tr>
+                                <tr><td><b>M/s. Sharadha Terry Products Limited</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Ranganathan Engineering</b></td></tr>
+                                <tr><td><b>M/s. Aqua Flow</b></td></tr>
+                                <tr><td><b>M/s. Shiva Textile</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Renalt Car Showroom</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. JJ Coating</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Rambo Casting</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. United Enterperises</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Shri Guru Krishna Textile</b>, Theni</td></tr>
+                                <tr><td><b>M/s. Renuka Textile</b>, Theni</td></tr>
+                                <tr><td><b>M/s Gangothri Textile</b>, Coimbtore</td></tr>
+                                <tr><td><b>M/s Infinet Foundary</b></td></tr>
+                                <tr><td><b>M/s Precol Pvt Limited</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s Lakshmi Narasima Textile Pvt Limited</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. Sree Anandhakumar Mills Limited</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. KOB Medical Textile</b>, Coimbatore</td></tr>
+                                <tr><td><b>M/s. ELGI Limited</b>, Coimbatore</td></tr>
+                                <tr><td><b>Completed more then 500 project...</b></td></tr>
+                				</tbody>
+						</table>
+                    </div>
+                </div>
+                
+			</div>
+		</div>
+	</section><!--/#projects-->
+
+    <!-- ====== Gallary Starts Here ==== -->
+    <section id="gallary">
+        <div class="team section-padding">
+            <div class="header"><h1>Gallery</h1></div>
+            <div class="container">
+                <div id="vlightbox1">
+			        <a class="vlightbox1" href="images/gallery/aB.jpg" title="RKS"><img src="images/p1.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+			        <a class="vlightbox1" href="images/p2big.jpg" title="RKS"><img src="images/p2.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+
+                    <a class="vlightbox1" href="images/Gallery/1B.jpg" title="RKS"><img src="images/Gallery/1.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/2B.jpg" title="RKS"><img src="images/Gallery/2.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/3B.jpg" title="RKS"><img src="images/Gallery/3.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/4B.jpg" title="RKS"><img src="images/Gallery/4.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/5B.jpg" title="RKS"><img src="images/Gallery/5.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/6B.jpg" title="RKS"><img src="images/Gallery/6.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/7B.jpg" title="RKS"><img src="images/Gallery/7.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/8B.jpg" title="RKS"><img src="images/Gallery/8.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/9B.jpg" title="RKS"><img src="images/Gallery/9.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/10B.jpg" title="RKS"><img src="images/Gallery/10.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+
+                    <a class="vlightbox1" href="images/Gallery/11B.jpg" title="RKS"><img src="images/Gallery/11.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/12B.jpg" title="RKS"><img src="images/Gallery/12.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/13B.jpg" title="RKS"><img src="images/Gallery/13.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/14B.jpg" title="RKS"><img src="images/Gallery/14.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+                    <a class="vlightbox1" href="images/Gallery/15B.jpg" title="RKS"><img src="images/Gallery/15.jpg" alt="RKS" class="thumbnail"/>RKS</a>
+			        
+			    </div>
+                    
+            </div>
+        </div>
+    </section>
+    <!-- ====== Gallary Ends Here === -->
+
+    <!-- ====== Description Section ====== -->
+    <section id="description">
+      <div class="description">
+        <div class="description-one section-padding">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-5 col-md-6">
+                <div class="app-image thumbnail"><img src="images/whyRKS.jpg" alt="RKS Steel Structures"/></div>
+                <div><h4>CUSTOM OPTIONS</h4>
+                    <p>In addition to the basics of design, such as determining the width, length and eave height of your steel building, RKS Steel Structures also offers additional customization options to explore. If you're looking for a high-quality steel building solution, RKS Steel Structures is the company for you.</p>
+                </div>
+              </div>
+              <div class="col-sm-7 col-md-6">
+                <div class="content">
+                  <h1>Why Choose RKS</h1>
+                  <p>WORLD’S LEADING METAL BUILDING RETAILER. RKS steel structures has been designing steel buildings for 35 years and the fact is, experience matters.</b></p>
+                  <h4>Here's another fact:</h4>
+                  <p>Our team of Metal Building Specialists have more than 150 years of combined experience in estimating and pricing steel building kits! Whether you’re in the market for something large and complex or something small and simple, we can meet your needs.<br />
+                    There’s a reason RKS Steel Structures System is among the nation’s leading retailers of metal buildings: We do them right. We build strong, quality steel buildings. We use the finest paint systems for a variety of end-use applications. We offer a superior paint warranty that guarantees against peeling, fading, chalking or cracking.<br /><br />
+                    We can fabricate virtually any width, length or height metal building your project calls for, and our Hub and Spoke Distribution Network enables the delivery of your custom steel building kit to your jobsite quickly and economically. Our only limitation is your imagination. Let us help make your metal building project a success.<br /><br />
+                  </p>
+                </div>
+              </div>
+            </div> <!-- .container> .row -->
+          </div> <!-- .container -->
+        </div> <!-- end .description-one -->
+
+        <div class="description-two section-padding dark-bg">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm-7 col-md-6">
+                <div class="content">
+                  <h4>STEEL VS OTHER BUILDING MATERIALS</h4>
+                  <p>When looking at cost per square foot, steel will be comparable to wood or other conventional building materials for buildings larger than about 1,200-1,500 square feet. But even if you find that your steel building is a larger initial investment, over the long run your structure can be significantly less expensive to own and maintain.</p>
+                  <b>BENEFITS OF STEEL BUILDINGS</b>
+                  <ul class="list-item">
+                    <li><i class="fa fa-linode"></i> Low Maintenance</li>
+                    <li><i class="fa fa-superpowers"></i> Energy Efficient </li>
+                    <li><i class="fa fa-cogs"></i> Durable</li>
+                    <li><i class="fa fa-umbrella"></i> Pest Resistant</li>
+                    <li><i class="fa fa-fire"></i> Fire Retardant</li>
+                    <li><i class="fa fa-umbrella"></i> Less Expensive to Insure</li>
+                  </ul>
+                </div> <!-- end .content -->
+              </div> <!-- .container> .row> .col-md-6 -->
+
+              <div class="col-sm-5 col-md-6">
+                <div class="app-image">
+                  <img class="img-responsive thumbnail" src="images/steel_vs_otherBuildingMaterials.jpg" alt="RKS Steel Structures"/>
+                  <img class="img-responsive thumbnail" src="images/aircraft_hagar.jpg" alt="RKS Steel Structures" />
+                </div> <!-- end .app-image -->
+              </div> <!-- .container> .row> .col-md-6 -->
+
+            </div> <!-- .container> .row -->
+          </div> <!-- .container -->
+        </div> <!-- end .description-two -->
+
+      </div> <!-- end .description -->
+    </section>
+    <!-- ====== End Description Section ====== -->
+
+
+    
+    <!-- ====== About US Section ====== -->
+    <section id="aboutus">
+        <div style=" background-image:url(images/bg/bridge-2651081_1920.jpg); background-repeat:no-repeat;">
+        <div class="container" style="color:White;" >
+            <div class="section-header text-center">
+                <h1 class="section-title text-center wow fadeInDown" style="color:White;">About Us</h1>
+                <p class="text-center wow fadeInDown">
+                            <h2>RKS Steel Structures</h2>
+                            <h4>36 YEARS OF DESIGNING QUALITY STEEL BUILDINGS</h4>
+                </p>
+                    <ul>
+                        <li>Covering 5,00,000 Sq.Ft. per year</li>
+                        <li>Average Turnover Of 2000 MT per year</li>
+                        <li>Year High Is 5000 MT (2011 - 2012)</li>
+                    </ul>
+                    <div class="underline" style="margin-bottom:30px;"><i class="fa fa-building-o"></i></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <p>RKS Steel Structures opened its doors for business in the fall of 1992 by Mr. R.K.Selvaraj. With a solid background in the construction industry. 
+                    <b>R.K.S Industries / R.K.Selvaraj & Co is changed as RKS Steel Structures.</b></p>
+                    <p>Our operation continues to grow, and as we expand, we stay at the forefront of the steel building industry. 
+                    But don’t just take our word for it – give us a call today and experience the difference our legacy of excellence can make for you. 
+                    </p>
+                    <p>Founded in the year 1992 by Mr.R.K.Selvaraj, RKS Industries today is reputed company for excellent structural work, with 
+                  more than 30 yrs experience in this domain. We are identified with quality service, implementing complex design innovations 
+                  and techniques in structural works and smiles of all our customer indicate our excellent quality of service in an 
+                  affordable pricing. We only employ the very best, most highly skilled tradesmen and we ensure before employing them, that the 
+                  individual them, that the individual has a wealth of knowledge in their own particular trade. We provide complete Steel Building Solutions 
+                  from concept to completion for factory buildings, warehouses, malls, stadiums, sports complexes, showrooms, 
+                    low rise buildings and other commercial buildings.</p>
+                </div>
+
+                <div class="col-sm-6 wow fadeInRight">
+                    <h3 class="column-title">Company Profile</h3>
+                    <table class="col-md-12 table-bordered  table-condensed cf">
+                        <tr><Td>CONCERN NAME</td><td>RKS Steel Structures</td></tr>
+                        <tr><Td>MANAGING DIRECTOR</td><td>R.K.Selvaraj</td></tr>
+                        <tr><Td>ADDRESS</td><td>6/200, E7, Divine Krishna Garden, Kadampadi</td></tr>
+                        <tr><Td></td><td>Coimbatore, TamilNadu 641401.</td></tr>
+                        <tr><Td></td><td>Mobile  : +(91)-9944999493</td></tr>
+                        <tr><Td></td><td>Mobile  : +(91)-9842222490</td></tr>
+                        <tr><Td>Email</td><td>rkssteelstructures@gmail.com</td></tr>
+                        <tr><Td></td><td>info@rkssteelstructures.com</td></tr>
+                        <tr><td>MAIN BANKERS</td><td>M/s. AXIS Bank, Trichy Road, Coimbatore</td></tr>
+                        <tr><td></td><td>M/s SBI, Sulur Air Force Coimbatore</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section><!--/#about-->
+    <!-- ====== End About US Section ====== -->
+
+
+    <!-- ====== Associates ====== -->
+    <section id="associate">
+        <div style="background-image:url(images/bg/associates.jpg); background-position:inherit; background-repeat:no-repeat; height:auto;">
+      <div class="container">
+        <div class="section-header"><br /><br />
+            <h1 class="section-title text-center wow fadeInDown">Our Associates</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+              <table class="table" style=" border:1px solid #96D0FC;">
+				  <tr><td>M/s. Shivaa ghowri consultant</td><td>Coimbatore</td></tr>
+                  <tr><td>M/s. Creators,</td><td>Coimbatore</td></tr>
+                  <tr><td>M/s. Dharmalingam associate</td><td>Coimbatore</td></tr>
+				  <tr><td>M/s. Swaminathan associate</td><td>Coimbatore</td></tr>
+				  <tr><td>M/s. Sankar & Associates</td><td>Coimbatore</td></tr>
+				  <tr><td>M/s. M.K welankar & associate</td><td>Bombay</td></tr>
+				  <tr><td>M/s. Venkathachallam associate</td><td>Coimbatore</td></tr>
+				  <tr><td>M/s. L&S architect,</td><td>Bangalore</td></tr>		  
+              </table>
+            </div>
+		  </div>
+		  
+			<div class="col-sm-6 col-md-4">
+				<div class="team-member wow fadeInUp" data-wow-duration="600ms" data-wow-delay="0ms">
+					<table class="table" style=" border:1px solid #60B8C8">
+						<tr><td>M/s. Mithran architect</td><td>Coimbatore</td></tr>
+				  		<tr><td>M/s. H.V. Patil& associate</td><td>Coimbatore</td></tr>
+				  		<tr><td>M/s. Design N architecture studio india pvt ltd</td><td>Coimbatore</td></tr>
+					  	<tr><td>M/s. R Karunanidhe construction pvt ltd</td><td>Coimbatore</td></tr>
+					  	<tr><td>M/s. Chettinadu construction</td><td>Dindigul</td></tr>
+					  	<tr><td>M/s. URC construction</td><td>Erode</td></tr>
+					  	<tr><td>M/s. Langval promoters</td><td>Thanjavur</td></tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class="col-sm-6 col-md-4">
+				<div class="team-member wow fadeInUp" data-wow-duration="800ms" data-wow-delay="0ms">
+					<table class="table" style="border: 1px solid #96D0FC;">
+                        <tr><td>M/s. Samraj construction</td><td>Coimbatore</td></tr>
+						<tr><td>M/s. Thangaraj & co</td><td>Coimbatore</td></tr>
+					 	<tr><td>M/s. Krithika construction</td><td>Salem</td></tr>
+					  	<tr><td>M/s Suresh construction</td><td>Coimbatore</td></tr>
+					  	<tr><td>M/s. Ramasamy construction</td><td>Salem</td></tr>
+					  	<tr><td>M/s. Ranganathan construction</td><td>Coimbatore</td></tr>
+					  	<tr><td>M/s. Thiruchitrambalam construction</td><td>Coimbatore</td></tr>
+					</table>
+				</div>
+			</div>
+			
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- ====== Associates ====== -->
+
+    <!-- ====== Strength Section ====== -->
+    <section id="strength">
+        <div class="container">
+            <div class="section-header"><br /><br />
+                <h1 class="section-title text-center wow fadeInDown">Our Strength</h1>
+                <p class="text-center wow fadeInDown">
+					Our highly motivated, dedicated and experienced Team includes Technical and Non Technical Leaders to take our Projects to next levels. 
+					There are about 1000 skilled labour force to implement Project goals into reality. Our team members are working together to meetout Project 
+                    timelines with quality and within the budget. 
+				</p>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="team-img" style="background-color:#FFFFFF">
+                            <img class="img-responsive" src="images/manpower.jpg" alt="Man Power"/>
+                        </div>
+              <table class="table">
+								<tr><td colspan="2"><h3>Technical</h3></td></tr>
+								<tr>
+									<td>B.E. Holders</td>
+									<td class='btn btn-info btn-xs'>15 Nos</td>
+								</tr>
+								<tr>
+									<td>Diploma Holders</td>
+									<td class='btn btn-info btn-xs'>10 Nos</td>
+								</tr>
+                                <tr><td>Experienced Fabricator</td>
+                                    <td class='btn btn-info btn-xs'>20 Nos</td>
+                                </tr>
+								
+								<tr><td><br></td><td></td></tr>
+								<tr><td colspan="2"><h3>Workers</h3></td></tr>
+								<tr><td>Skilled Fitter</td><td class='btn btn-info btn-xs'>75 Nos</td></tr>
+								<tr><td>Skilled Welder</td><td class='btn btn-info btn-xs'>100 Nos</td></tr>
+								<tr><td>Skilled Cutter</td><td class='btn btn-info btn-xs'>100 Nos</td></tr>
+								<tr><td>Helper</td><td class='btn btn-info btn-xs'>300 Nos</td></tr>
+								<tr><td>Painters</td><td class='btn btn-info btn-xs'>75 Nos</td></tr>
+								<tr><td>Driver</td><td class='btn btn-info btn-xs'>5 Nos</td></tr>
+						</table>
+						
+						
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="team-img">
+                            <img class="img-responsive" src="images/Tools.jpg" alt="Tools"/>
+                        </div>
+                        <table class="table">
+								<tr><td colspan="2"><h3>Machineries & Tools</h3></td></tr>
+								<tr><td>Welding Machine</td><td class='btn btn-info btn-xs'>150 Nos</td></tr>
+								<tr><td>Drilling Machine</td><td class='btn btn-info btn-xs'>25 Nos</td></tr>
+								<tr><td>Straight Line Cutting Machine</td><td class='btn btn-info btn-xs'>50 Nos</td></tr>
+								<tr><td>Cutting Set</td><td class='btn btn-info btn-xs'>100 Nos</td></tr>
+								<tr><td>Generator 7.5KVA to 62.5KVA</td><td class='btn btn-info btn-xs'>10 Nos</td></tr>
+						</table>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="team-member wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="team-img" style="background-color:#FFFFFF;">
+                            <img class="img-responsive" src="images/vehicle.jpg" alt="Vehicle"/>
+                        </div>
+                        <table class="table">
+							<tr><td colspan="2"><h3>Vehicles</h3></td></tr>
+							<tr><td>Hydraulic 10 Ton Crane</td><td class='btn btn-info btn-xs'>2 Nos</td></tr>
+							<tr><td>Hydraulic 12 Ton Crane</td><td class='btn btn-info btn-xs'>10 Nos</td></tr>
+							<tr><td>Telescopic 20 Ton Crane</td><td class='btn btn-info btn-xs'>2 Nos</td></tr>
+                            <tr><td>Telescopic 25 Ton Crane</td><td class='btn btn-info btn-xs'>1 Nos</td></tr>
+                            <tr><td>Telescopic 35 Ton Crane</td><td class='btn btn-info btn-xs'>1 Nos</td></tr>
+                            <tr><td>Telescopic 40 Ton Crane</td><td class='btn btn-info btn-xs'>1 Nos</td></tr>
+                            <tr><td>Telescopic 50 Ton Crane</td><td class='btn btn-info btn-xs'>2 Nos</td></tr>
+                            <tr><td>Telescopic 100 Ton Crane</td><td class='btn btn-info btn-xs'>1 Nos</td></tr>
+                            <tr><td>Cars</td><td class='btn btn-info btn-xs'>5 Nos</td></tr>
+                            <tr><td>Bolero Pickup</td><td class='btn btn-info btn-xs'>2 Nos</td></tr>
+                            <tr><td>Force Jeep</td><td class='btn btn-info btn-xs'>1 Nos</td></tr>
+                            <tr><td>Eicher</td><td class='btn btn-info btn-xs'>1 Nos</td></tr>
+                            <tr><td>Two Wheelers</td><td class='btn btn-info btn-xs'>10 Nos</td></tr>
+						</table>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="divider"></div>
+
+           
+        </div>
+    </section>
+    <!--/#Strength-team-->
+
+
+
+     <!-- ====== Career ====== -->
+    <section id="career">
+        <div style="background-image:url(images/bg/job.jpg); background-position:inherit; background-repeat:no-repeat;">
+      <div class="container">
+
+        <div class="section-header text-center"><br /><br />
+            <h1 class="section-title text-center wow fadeInDown">Career</h1>
+            <h2>We Are Hiring</h2>
+            <h2>Send Your Resume</h2>
+            <h2>info@RKSsteelstructures.com</h2>
+        </div>
+        <div class="row" style="height:100px;">
+        </div>
+       </div>
+
+      </div>
+    </section>
+    <!-- ====== Career ====== -->
+
+    <!-- ====== Contact Section ====== -->
+    <section id="contact">
+      <div class="footer">
+        <div class="container">
+          <h1>Contact Us</h1>
+          <form action="" class="form contact">
+
+            <div class="row">
+              <div class="col-xs-12 col-md-4" style="text-align:left;">
+                <h2>We Located At</h2>
+                <div>
+                    <ul style="list-style:none; text-align:left;">
+                        <li>RKS Steel Structures</li>
+                        <li>6/200, E7, Divine Krishna Garden, Kadampadi</li>
+                        <li>Coimbatore, TamilNadu 641401.</li>
+                        <li>Mobile : +(91)-9944999493 /  +(91)-9842222490</li>
+                        <li>Email: rkssteelstructures@gmail.com</li>
+                        <li>Email: info@rkssteelstructures.com</li>
+                    </ul>
+                </div>
+              </div> <!-- end .form> .row> .col-md-4 -->
+              
+              <div class="col-xs-12 col-md-8">
+                    <div class="map-canvas" id="map-canvas">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244.75252333344628!2d77.15946488808648!3d11.035597835300955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8550fd19ee26d%3A0x7c8c5971fd678a50!2sDivine+Krishna+Garden!5e0!3m2!1sen!2sin!4v1513079192006" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+              </div>
+            </div> <!-- end .form> .row -->
+
+          </form> <!-- end .form -->   
+        </div> <!-- end .container -->
+      </div> <!-- end .footer -->
+    </section>
+
+    <!-- ====== End Contact Section ====== -->
+
+
+    <!-- ====== Copyright Section ====== -->
+    <section class="copyright dark-bg">
+      <div class="container">
+        <span class="pull-left"><p>&copy; <a href="#">RKS Steel Structures</a>, All Rights Reserved</p></span>
+        <span class="pull-right">Website By <i class="fa fa-envelope"></i> Thiru.in@gmail.com</span>
+      </div> <!-- end .container -->
+    </section>
+    <!-- ====== End Copyright Section ====== -->
+
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
+    
+    <!-- Modernizr js -->
+    <script src="js/modernizr-latest.js"></script>
+
+    <!-- Bootstrap 3.2.0 js -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Owl Carousel plugin -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- ScrollTo js -->
+    <script src="js/jquery.scrollto.min.js"></script>
+
+    <!-- LocalScroll js -->
+    <script src="js/jquery.localScroll.min.js"></script>
+
+    <!-- jQuery Parallax plugin -->
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+
+    <!-- Skrollr js plugin -->
+    <script src="js/skrollr.min.js"></script>
+
+    <!-- jQuery One Page Nav Plugin -->
+    <script src="js/jquery.nav.js"></script>
+    
+    <!-- jQuery Pretty Photo Plugin -->
+    <script src="js/jquery.prettyPhoto.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+    <!-- visuallightbox js -->
+        <script src="js/thumbscript1.js" type="text/javascript"></script>
+         <script src="js/vlbdata1.js" type="text/javascript"></script>
+         <script src="js/visuallightbox.min.js" type="text/javascript"></script>
+    
+    <script>
+      jQuery(document).ready(function($) {
+        "use strict";
+
+        jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({social_tools:false});
+      });
+    </script>
+  </body>
+</html>
